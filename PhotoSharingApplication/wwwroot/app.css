@@ -1,0 +1,244 @@
+html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a, .btn-link {
+    color: #006bb7;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+.content {
+    padding-top: 1.1rem;
+}
+
+h1:focus {
+    outline: none;
+}
+
+.valid.modified:not([type=checkbox]) {
+    outline: 1px solid #26b050;
+}
+
+.invalid {
+    outline: 1px solid #e50000;
+}
+
+.validation-message {
+    color: #e50000;
+}
+
+.blazor-error-boundary {
+    background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTYiIGhlaWdodD0iNDkiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIG92ZXJmbG93PSJoaWRkZW4iPjxkZWZzPjxjbGlwUGF0aCBpZD0iY2xpcDAiPjxyZWN0IHg9IjIzNSIgeT0iNTEiIHdpZHRoPSI1NiIgaGVpZ2h0PSI0OSIvPjwvY2xpcFBhdGg+PC9kZWZzPjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMCkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzUgLTUxKSI+PHBhdGggZD0iTTI2My41MDYgNTFDMjY0LjcxNyA1MSAyNjUuODEzIDUxLjQ4MzcgMjY2LjYwNiA1Mi4yNjU4TDI2Ny4wNTIgNTIuNzk4NyAyNjcuNTM5IDUzLjYyODMgMjkwLjE4NSA5Mi4xODMxIDI5MC41NDUgOTIuNzk1IDI5MC42NTYgOTIuOTk2QzI5MC44NzcgOTMuNTEzIDI5MSA5NC4wODE1IDI5MSA5NC42NzgyIDI5MSA5Ny4wNjUxIDI4OS4wMzggOTkgMjg2LjYxNyA5OUwyNDAuMzgzIDk5QzIzNy45NjMgOTkgMjM2IDk3LjA2NTEgMjM2IDk0LjY3ODIgMjM2IDk0LjM3OTkgMjM2LjAzMSA5NC4wODg2IDIzNi4wODkgOTMuODA3MkwyMzYuMzM4IDkzLjAxNjIgMjM2Ljg1OCA5Mi4xMzE0IDI1OS40NzMgNTMuNjI5NCAyNTkuOTYxIDUyLjc5ODUgMjYwLjQwNyA1Mi4yNjU4QzI2MS4yIDUxLjQ4MzcgMjYyLjI5NiA1MSAyNjMuNTA2IDUxWk0yNjMuNTg2IDY2LjAxODNDMjYwLjczNyA2Ni4wMTgzIDI1OS4zMTMgNjcuMTI0NSAyNTkuMzEzIDY5LjMzNyAyNTkuMzEzIDY5LjYxMDIgMjU5LjMzMiA2OS44NjA4IDI1OS4zNzEgNzAuMDg4N0wyNjEuNzk1IDg0LjAxNjEgMjY1LjM4IDg0LjAxNjEgMjY3LjgyMSA2OS43NDc1QzI2Ny44NiA2OS43MzA5IDI2Ny44NzkgNjkuNTg3NyAyNjcuODc5IDY5LjMxNzkgMjY3Ljg3OSA2Ny4xMTgyIDI2Ni40NDggNjYuMDE4MyAyNjMuNTg2IDY2LjAxODNaTTI2My41NzYgODYuMDU0N0MyNjEuMDQ5IDg2LjA1NDcgMjU5Ljc4NiA4Ny4zMDA1IDI1OS43ODYgODkuNzkyMSAyNTkuNzg2IDkyLjI4MzcgMjYxLjA0OSA5My41Mjk1IDI2My41NzYgOTMuNTI5NSAyNjYuMTE2IDkzLjUyOTUgMjY3LjM4NyA5Mi4yODM3IDI2Ny4zODcgODkuNzkyMSAyNjcuMzg3IDg3LjMwMDUgMjY2LjExNiA4Ni4wNTQ3IDI2My41NzYgODYuMDU0N1oiIGZpbGw9IiNGRkU1MDAiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvZz48L3N2Zz4=) no-repeat 1rem/1.8rem, #b32121;
+    padding: 1rem 1rem 1rem 3.7rem;
+    color: white;
+}
+
+.blazor-error-boundary::after {
+    content: "An error has occurred."
+}
+
+.darker-border-checkbox.form-check-input {
+    border-color: #929292;
+}
+
+body {
+    background-color: #f0f0f0; /* Light gray background for the entire page */
+}
+
+.card {
+    border: none; /* Removes the card's default borders */
+    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow around the card */
+}
+
+.custom-navbar-shadow {
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Creates a deeper drop shadow */
+}
+
+.page-container {
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.feed-container {
+    max-width: 700px;
+    width: 100%;
+    background-color: white;
+    padding: 20px 40px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.side-image-left, .side-image-right {
+    position: fixed;
+    top: 0px;
+    width: 240px; /* Width of the side image containers */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1; /* Ensures the images stay behind the feed */
+    opacity: 0.6;
+}
+
+.side-image-left {
+    left: 70px;
+    transform: rotate(-5deg); /* Rotates the image slightly to the left */
+}
+
+.side-image-right {
+    right: 70px;
+    transform: rotate(5deg); /* Rotates the image slightly to the right */
+}
+
+
+.side-image {
+    max-width: 100%;
+    max-height: 90vh; /* Ensures the image is not too tall */
+    object-fit: contain;
+}
+
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #68AFC1; /* Matches the navbar color */
+    box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.2); /* Adds shadow to the bar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures it's always on top */
+}
+
+.plus-button {
+    top: -8px; /* Moves the button up slightly */
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3); /* Shadow for the button */
+    font-size: 24px;
+    color: #68AFC1; /* Plus icon color matching the navbar */
+    border: none;
+}
+
+.plus-button:hover {
+    background-color: #e6f7fc; /* Slight hover effect for the plus button */
+    color: #56a1b5;
+}
+
+.plus-image {
+    width: 40px; /* Adjust the size of the square image */
+    height: 40px; /* Makes sure the image is a square */
+}
+
+/* Optional: Add some rounding to the bottom bar where the plus button is */
+.bottom-bar::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70px;
+    height: 70px;
+    background-color: #68AFC1;
+    border-radius: 100% 100% 0 0;
+    z-index: -1; /* Keeps it behind the button */
+}
+
+.comment-header {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.confirmation-message {
+    color: #dc3545; /* Red color for delete confirmation text */
+    font-weight: bold;
+}
+
+.comment-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.comment-username {
+    color: #007bff; /* Blue color for the username */
+    font-weight: bold;
+}
+
+.comment-body {
+    color: #6c757d; /* Light gray color for the comment body text */
+}
+
+.comments-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column; 
+    align-items: flex-start; /* Centers the comments horizontally */
+    margin-top: 30px; /* Adds space at the top of the page */
+    /* Transparent blue border on the left side */
+    border-left: 2px solid rgba(0, 123, 255, 0.5);
+    padding-left: 10px; /* Adds space between the border and text */
+}
+
+.comment-section {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px; /* Limits the width of each comment section */
+    margin-bottom: 5px; /* Adds space between each comment */
+    max-height: 40px;
+}
+
+.comment-text-section {
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    width: fit-content;
+}
+
+.comment-button-section {
+    display: flex;
+    justify-content: flex-end;
+    gap: 4px;
+    width: fit-content;
+}
+
+.add-comment-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.edit-comment-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    width: 100%;
+}
+
+.delete-confirmation-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 4px;
+    width: 100%;
+}

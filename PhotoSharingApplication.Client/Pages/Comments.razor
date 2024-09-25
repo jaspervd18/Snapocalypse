@@ -1,0 +1,13 @@
+﻿<div class="comments-container">
+    @if (comments is not null)
+    {
+        @foreach (var comment in comments)
+        {
+            <div class="comment-section">
+                <CommentComponent ViewMode="ViewMode.View" Comment="comment" OnSave="UpdateComment" OnDelete="DeleteComment" />
+            </div>
+        }
+    }
+</div>
+
+<CommentComponent ViewMode="ViewMode.Add" Comment="newComment" OnSave="AddComment" />

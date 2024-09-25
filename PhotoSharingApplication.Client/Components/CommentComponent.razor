@@ -1,0 +1,18 @@
+﻿@if (comment is not null)
+{
+    @switch (viewMode)
+    {
+        case ViewMode.View:
+            <CommentViewComponent Comment="comment" @bind-ViewMode="viewMode" />
+            break;
+        case ViewMode.Add:
+            <CommentAddComponent Comment="comment" @bind-ViewMode="viewMode" OnSave="OnSave" />
+            break;
+        case ViewMode.Edit:
+            <CommentEditComponent Comment="comment" @bind-ViewMode="viewMode" OnSave="OnSave" />
+            break;
+        case ViewMode.Delete:
+            <CommentDeleteComponent Comment="comment" @bind-ViewMode="viewMode" OnDelete="OnDelete" />
+            break;
+    }
+}

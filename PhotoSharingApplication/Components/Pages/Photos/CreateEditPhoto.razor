@@ -1,0 +1,35 @@
+﻿@page "/photos/create"
+@page "/photos/edit/{id:int}"
+
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh; margin-top: 30px;">
+    <div class="card p-4 shadow-lg" style="max-width: 600px; width: 100%;">
+        <h3 class="text-center">Share a snap</h3>
+
+        <EditForm Model="@photo" OnSubmit="Save" FormName="PhotoForm" enctype="multipart/form-data">
+            <div class="mb-3">
+                <InputNumber @bind-Value="photo.Id" hidden />
+                <label for="title" class="form-label">Title:</label>
+                <InputText @bind-Value="photo.Title" id="title" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description (optional):</label>
+                <InputTextArea @bind-Value="photo.Description" id="description" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label for="file" class="form-label">File:</label>
+                <InputFile class="form-control" id="file" name="fileModel.File" />
+            </div>
+
+            @if (!string.IsNullOrEmpty(photo.DataUrl))
+            {
+                <div class="text-center mb-3">
+                    <img src="@photo.DataUrl" alt="@photo.Title" class="img-fluid" style="max-height: 300px;" />
+                </div>
+            }
+
+            <button type="submit" class="btn btn-primary w-100" style="background-color: #68AFC1; border: 0">Save</button>
+        </EditForm>
+    </div>
+</div>

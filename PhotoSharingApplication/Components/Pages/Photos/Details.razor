@@ -1,0 +1,17 @@
+﻿@page "/photos/details/{id:int}"
+
+<a href="/photos/all">Back to all photos</a>
+
+<div class="card mb-4 shadow-sm">
+    <img src="@photo.DataUrl" class="card-img-top img-fluid" alt="@photo.Title" style="max-height: 300px; object-fit: cover;">
+    <div class="card-body">
+        <h5 class="card-title">@photo.Title</h5>
+        <p class="card-text">@photo.Description</p>
+        <div class="d-flex justify-content-between align-items-center mt-3">
+            <div class="btn-group">
+                <NavLink class="btn btn-sm btn-outline-secondary" href="@($"photos/edit/{photo.Id}")">Update</NavLink>
+                <NavLink class="btn btn-sm btn-outline-danger" href="@($"photos/delete/{photo.Id}")">Delete</NavLink>
+            </div>
+        </div>
+    </div>
+</div>

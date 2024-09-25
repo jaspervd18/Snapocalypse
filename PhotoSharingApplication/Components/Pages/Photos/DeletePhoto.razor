@@ -1,0 +1,26 @@
+﻿@page "/photos/delete/{id:int}"
+
+@using PhotoSharingApplication.Domain
+
+@inject IPhotosRepository PhotosRepository
+@inject NavigationManager NavigationManager
+
+@code {
+    [Parameter] public int Id { get; set; }
+    Photo? photo { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        photo = await PhotosRepository.GetPhotoByIdAsync(Id);
+        await RemovePhoto();
+    }
+
+    async Task RemovePhoto()
+    {
+        if (photo is not null)
+        {
+            await PhotosRepository.DeletePhotoAsync(photo.Id);
+            NavigationManager.NavigateTo("photos/all");
+        }
+    }
+}

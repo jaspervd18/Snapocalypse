@@ -1,0 +1,28 @@
+﻿@inherits CommentComponentBase
+
+<!-- Display comment section -->
+@if (comment is not null)
+{
+    <div class="comment-section">
+        <div class="comment-text-section">
+            <p class="comment-username">@Comment?.Title</p>
+            <p class="comment-body">@Comment?.Body</p>
+        </div>
+        <div class="comment-button-section">
+            <button @onclick="OnEditButtonClicked" class="btn btn-outline-primary btn-sm">Edit</button>
+            <button @onclick="OnDeleteButtonClicked" class="btn btn-outline-danger btn-sm">Delete</button>
+        </div>
+    </div>
+}
+
+@code {
+    private async Task OnEditButtonClicked()
+    {
+        await NotifyCommentStateChanged(ViewMode.Edit);
+    }
+
+    private async Task OnDeleteButtonClicked()
+    {
+        await NotifyCommentStateChanged(ViewMode.Delete);
+    }
+}

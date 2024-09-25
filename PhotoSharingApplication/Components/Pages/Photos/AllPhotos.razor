@@ -1,0 +1,36 @@
+﻿@page "/photos/all"
+@page "/photos"
+@page "/"
+
+<div class="page-container">
+    <div class="side-image-left">
+        <img src="images/logo_no_background.png" alt="Left Image" class="side-image">
+    </div>
+
+    <div class="feed-container">
+            @if (photos.Count() == 0)
+            {
+                <p>Your feed looks empty...</p>
+            }
+            else
+            {
+                @foreach (var photo in photos)
+                {
+                    <PhotoCard Photo="@photo" />
+                }
+            }
+    </div>
+
+    <div class="side-image-right">
+        <img src="images/phone_with_logo.png" alt="Right Image" class="side-image">
+    </div>
+</div>
+
+<!-- Bottom bar with a plus icon in the middle -->
+<div class="bottom-bar">
+    <NavLink href="photos/create" class="plus-button">
+        <img src="images/logo_no_text_no_background.png" alt="Create" class="plus-image" />
+    </NavLink>
+</div>
+
+
