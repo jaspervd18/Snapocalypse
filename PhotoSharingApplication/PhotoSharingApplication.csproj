@@ -13,6 +13,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Shared\PhotoSharingApplication.Shared.csproj" />
     <ProjectReference Include="..\PhotoSharingApplication.Client\PhotoSharingApplication.Client.csproj" />
+    <ProjectReference Include="..\PhotoSharingApplicatoin.Domain\PhotoSharingApplicatoin.Domain.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
