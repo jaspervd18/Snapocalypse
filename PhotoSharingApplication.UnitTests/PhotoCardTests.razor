@@ -1,0 +1,35 @@
+@inherits TestContext
+@using PhotoSharingApplication.Components.Pages.Photos;
+
+@code {
+    [Fact]
+    public void RendersEmpty_WhenPhotoIsNull()
+    {
+        // Arrange
+        Photo photo = null;
+        // Act
+        var cut = Render(@<PhotoCard Photo="photo" />);
+        // Assert
+        cut.MarkupMatches("");
+    }
+
+    [Fact]
+    public void DoesNotRender_WhenShowDetails_ShowDelete_And_ShowEdit_AreFalse() 
+    { 
+    }
+
+    [Fact]
+    public void RendersFooterWithDetailsLink_WhenShowDetailsIsTrue()
+    {
+    }
+
+    [Fact]
+    public void RendersFooterWithDeleteLink_WhenShowDeleteIsTrue()
+    {
+    }
+
+    [Fact]
+    public void RendersFooterWithEditLink_WhenShowUpdateIsTrue()
+    {
+    }
+}
