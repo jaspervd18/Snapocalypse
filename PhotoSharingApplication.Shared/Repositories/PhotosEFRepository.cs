@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PhotoSharingApplication.Domain;
-using PhotoSharingApplication.Shared.Data;
+using PhotoSharingApplication.Persistence.Data;
 using PhotoSharingApplication.Shared.Interfaces;
 
 namespace PhotoSharingApplication.Shared.Repositories;

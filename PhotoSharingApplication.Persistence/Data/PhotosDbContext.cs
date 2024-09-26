@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PhotoSharingApplication.Domain;
 
-namespace PhotoSharingApplication.Shared.Data;
+namespace PhotoSharingApplication.Persistence.Data;
+
 public class PhotosDbContext : DbContext
 {
     public PhotosDbContext(DbContextOptions<PhotosDbContext> options) : base(options)
